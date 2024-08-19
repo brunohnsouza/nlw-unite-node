@@ -1,0 +1,30 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Unite Event 2024",
+  "details": null,
+  "maximumAttendees": 20
+}
+
+###
+
+POST http://localhost:3333/events/a8882107-de98-4d09-924b-d728beb59822/attendees
+Content-Type: application/json
+
+{
+    "name": "John Doee",
+    "email": "johndoee@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/a8882107-de98-4d09-924b-d728beb59822
+
+###
+GET http://localhost:3333/attendees/10130/badge
+
+###
+GET http://localhost:3333/attendees/10121/check-in
+
+###
+GET http://localhost:3333/events/a8882107-de98-4d09-924b-d728beb59822/attendees?query=john
